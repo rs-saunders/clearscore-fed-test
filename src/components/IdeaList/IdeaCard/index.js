@@ -3,8 +3,9 @@ import styles from './index.module.css';
 
 const IdeaCard = ({title, description}) => (
   <div className={styles.container}>
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <h3 className={styles.title}>{title}</h3>
+    <hr />
+    <p className={styles.description}>{description}</p>
   </div>
 );
 

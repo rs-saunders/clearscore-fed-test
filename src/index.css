@@ -1,5 +1,11 @@
+:root {
+  --main-text-color: #17394d;
+  --main-container-color: #dbdbdb;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    color: var(--main-text-color);
+    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
 }

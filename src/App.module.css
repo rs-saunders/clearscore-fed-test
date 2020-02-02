@@ -15,17 +15,20 @@
 
 .header {
   grid-area: header;
-  background-color: lightblue;
-  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #2196f3;
+  padding: 0rem 1.5rem;
+  font-size: 0.75rem;
 }
 
 .main {
   grid-area: content;
   padding: 1rem 1.5rem;
+  background-color: #fafafa;
 }
 
 .footer {
   grid-area: footer;
-  background-color: lightcoral;
+  background-color: var(--main-container-color);
   padding: 1rem 1.5rem;
 }
