@@ -12,13 +12,13 @@ export default class App extends Component {
         </header>
         <main className={styles.main}>
           <ColumnLayout>
-            <section className={styles.column}>
+            <section>
               <h2>Testing Column 1</h2>
             </section>
-            <section className={styles.column}>
+            <section>
               <h2>Testing Column 2</h2>
             </section>
-            <section className={styles.column}>
+            <section>
               <h2>Testing Column 3</h2>
             </section>
           </ColumnLayout>

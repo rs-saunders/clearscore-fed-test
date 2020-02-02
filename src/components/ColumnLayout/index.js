@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Children } from 'react';
 import styles from './index.module.css';
 
 const ColumnLayout = ({children}) => (
   <div className={styles.container}>
-    {children}
+    {Children.map(children, (child) => (
+      <div className={styles.column}>
+        {child}
+      </div>
+    ))}
   </div>
 );
 
