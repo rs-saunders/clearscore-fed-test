@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import styles from './App.module.css';
 import ColumnLayout from './components/ColumnLayout';
 import IdeaList from './components/IdeaList';
