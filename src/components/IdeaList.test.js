@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import IdeaList from './';
+import IdeaList from './IdeaList';
 import IdeaCard from './IdeaCard';
 
 it('renders with no props', () => {

@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import styles from './index.module.css';
+import styles from './ColumnLayout.module.css';
 
 const ColumnLayout = ({children}) => (
   <div className={styles.container}>

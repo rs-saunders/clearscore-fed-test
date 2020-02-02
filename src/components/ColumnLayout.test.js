@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ColumnLayout from './';
-import styles from './index.module.css';
+import ColumnLayout from './ColumnLayout';
+import styles from './ColumnLayout.module.css';
 
 it('renders with no children', () => {
   shallow(<ColumnLayout />);

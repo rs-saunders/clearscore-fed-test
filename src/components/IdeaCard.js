@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.module.css';
+import styles from './IdeaCard.module.css';
 
 const IdeaCard = ({title, description}) => (
   <div className={styles.container}>
