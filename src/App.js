@@ -4,9 +4,16 @@ import styles from './App.module.css';
 import ColumnLayout from './components/ColumnLayout';
 import IdeaList from './components/IdeaList';
 
+const ideaLists = [
+  'Good Ideas',
+  'Bad Ideas',
+  'Other Ideas',
+];
+
 const ideas = [
   {
     title: 'Idea 1',
+    ideaList: 'Good Ideas',
     description: `
       Lorem ipsum dolor sit amet,
       consectetur adipiscing elit.
@@ -18,6 +25,31 @@ const ideas = [
   },
   {
     title: 'Idea 2',
+    ideaList: 'Good Ideas',
+    description: `
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+      Mauris in facilisis orci.
+      Phasellus euismod, lorem eget rutrum aliquam,
+      neque velit rhoncus turpis,
+      eget ullamcorper diam metus ac arcu.
+      `,
+  },
+  {
+    title: 'Idea 3',
+    ideaList: 'Bad Ideas',
+    description: `
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+      Mauris in facilisis orci.
+      Phasellus euismod, lorem eget rutrum aliquam,
+      neque velit rhoncus turpis,
+      eget ullamcorper diam metus ac arcu.
+      `,
+  },
+  {
+    title: 'Idea 4',
+    ideaList: 'Other Ideas',
     description: `
       Lorem ipsum dolor sit amet,
       consectetur adipiscing elit.
@@ -38,18 +70,15 @@ export default class App extends Component {
         </header>
         <main className={styles.main}>
           <ColumnLayout>
-            <IdeaList
-              title="Good Ideas"
-              ideas={ideas}
-            />
-            <IdeaList
-              title="Bad Ideas"
-              ideas={ideas}
-            />
-            <IdeaList
-              title="Other Ideas"
-              ideas={ideas}
-            />
+            {ideaLists.map(title => (
+              <IdeaList
+                key={title}
+                title={title}
+                ideas={ideas
+                  .filter(idea => idea.ideaList === title)
+                }
+              />
+            ))}
           </ColumnLayout>
         </main>
         <footer className={styles.footer}>
