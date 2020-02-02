@@ -1,3 +1,32 @@
-.test {
-    background-color: red;
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightblue;
+  padding: 1rem 1.5rem;
+}
+
+.main {
+  grid-area: content;
+  background-color: lightgrey;
+  padding: 1rem 1.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightcoral;
+  padding: 1rem 1.5rem;
 }
