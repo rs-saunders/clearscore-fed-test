@@ -21,8 +21,13 @@
 
 .main {
   grid-area: content;
-  background-color: lightgrey;
   padding: 1rem 1.5rem;
+}
+
+.column {
+  border-radius: .2rem;
+  padding: .5rem;
+  background-color: lightgrey;
 }
 
 .footer {
