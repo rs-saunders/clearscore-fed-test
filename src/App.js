@@ -3,6 +3,7 @@ import { subDays } from 'date-fns';
 import styles from './App.module.css';
 import ColumnLayout from './components/ColumnLayout';
 import IdeaList from './components/IdeaList';
+import { randomId } from './util';
 
 const App = () => {
 
@@ -12,8 +13,9 @@ const App = () => {
     'Other Ideas',
   ]);
 
-  const [ ideas ] = useState([
+  const [ ideas, setIdeas ] = useState([
     {
+      id: randomId(),
       title: 'Idea 1',
       ideaList: 'Good Ideas',
       editing: false,
@@ -22,6 +24,7 @@ const App = () => {
       updatedAt: subDays(Date.now(), 2),
     },
     {
+      id: randomId(),
       title: 'Idea 2',
       ideaList: 'Good Ideas',
       editing: true,
@@ -29,6 +32,7 @@ const App = () => {
       createdAt: subDays(Date.now(), 2),
     },
     {
+      id: randomId(),
       title: 'Idea 3',
       ideaList: 'Bad Ideas',
       editing: false,
@@ -36,12 +40,35 @@ const App = () => {
       createdAt: subDays(Date.now(), 1),
     },
     {
+      id: randomId(),
       title: 'Idea 4',
       ideaList: 'Other Ideas',
       editing: true,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
     },
   ]);
+
+  const addNewIdea = (ideaList) => {
+    setIdeas([
+      ...ideas,
+      {
+        id: randomId(),
+        ideaList,
+        editing: true,
+        title: '',
+        description: '',
+      }
+    ]);
+  }
+
+  const saveIdea = (ideaToSave) => {
+    const index = ideas.findIndex(idea => idea.id === ideaToSave.id);
+    setIdeas([
+      ...ideas.slice(0, index),
+      ideaToSave,
+      ...ideas.slice(index+1, ideas.length),
+    ]);
+  }
 
   return (
     <div className={styles.container}>
@@ -54,6 +81,8 @@ const App = () => {
             <IdeaList
               key={title}
               title={title}
+              addNewIdea={addNewIdea}
+              saveIdea={saveIdea}
               ideas={ideas
                 .filter(idea => idea.ideaList === title)
               }

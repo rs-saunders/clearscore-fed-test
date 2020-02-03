@@ -18,12 +18,14 @@ it('renders with title prop', () => {
 it('renders with ideas', () => {
   const wrapper = shallow(<IdeaList ideas={[
     {
+      id: 1,
       title: 'Idea 1',
       description: `some description 1`,
       createdAt: new Date(2020, 1, 2),
       updatedAt: new Date(2020, 1, 3),
     },
     {
+      id: 2,
       title: 'Idea 2',
       description: `some description 2`,
       createdAt: new Date(2019, 2, 2),
@@ -47,19 +49,23 @@ it('renders with ideas', () => {
 it('renders with editing ideas', () => {
   const wrapper = mount(<IdeaList ideas={[
     {
+      id: 1,
       title: 'Idea 1',
       description: `some description 1`,
     },
     {
+      id: 2,
       title: 'Idea 2',
       editing: true,
       description: `some description 2`,
     },
     {
+      id: 3,
       title: 'Idea 3',
       description: `some description 3`,
     },
     {
+      id: 4,
       title: 'Idea 4',
       editing: true,
       description: `some description 4`,
