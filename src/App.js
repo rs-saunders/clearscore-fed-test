@@ -13,50 +13,22 @@ const ideas = [
   {
     title: 'Idea 1',
     ideaList: 'Good Ideas',
-    description: `
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-      Mauris in facilisis orci.
-      Phasellus euismod, lorem eget rutrum aliquam,
-      neque velit rhoncus turpis,
-      eget ullamcorper diam metus ac arcu.
-      `,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 2',
     ideaList: 'Good Ideas',
-    description: `
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-      Mauris in facilisis orci.
-      Phasellus euismod, lorem eget rutrum aliquam,
-      neque velit rhoncus turpis,
-      eget ullamcorper diam metus ac arcu.
-      `,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 3',
     ideaList: 'Bad Ideas',
-    description: `
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-      Mauris in facilisis orci.
-      Phasellus euismod, lorem eget rutrum aliquam,
-      neque velit rhoncus turpis,
-      eget ullamcorper diam metus ac arcu.
-      `,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 4',
     ideaList: 'Other Ideas',
-    description: `
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-      Mauris in facilisis orci.
-      Phasellus euismod, lorem eget rutrum aliquam,
-      neque velit rhoncus turpis,
-      eget ullamcorper diam metus ac arcu.
-      `,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
 ];
 
