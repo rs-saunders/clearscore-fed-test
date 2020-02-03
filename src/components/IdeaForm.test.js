@@ -51,6 +51,6 @@ it('displays error about too long description on blur', async () => {
     wrapper.find('textarea[name="description"]').simulate('blur');
   });
   await act(async () => {
-    expect(wrapper.find('.footer').text()).toEqual('Description must be 150 characters or less');
+    expect(wrapper.find('.footer').text()).toEqual('Description must be 140 characters or less');
   });
 });
