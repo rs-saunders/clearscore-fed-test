@@ -20,10 +20,13 @@ it('renders with ideas', () => {
     {
       title: 'Idea 1',
       description: `some description 1`,
+      createdAt: new Date(2020, 1, 2),
+      updatedAt: new Date(2020, 1, 3),
     },
     {
       title: 'Idea 2',
       description: `some description 2`,
+      createdAt: new Date(2019, 2, 2),
     },
   ]} />);
 
@@ -33,10 +36,12 @@ it('renders with ideas', () => {
   const firstIdea = ideaCards.first().dive();
   expect(firstIdea.find('h3').text()).toEqual('Idea 1');
   expect(firstIdea.find('p').text()).toEqual('some description 1');
+  expect(firstIdea.find('.metadata').text()).toEqual('Created:02/02/2020 12:00 a.m.Updated:03/02/2020 12:00 a.m.');
 
   const lastIdea = ideaCards.last().dive();
   expect(lastIdea.find('h3').text()).toEqual('Idea 2');
   expect(lastIdea.find('p').text()).toEqual('some description 2');
+  expect(lastIdea.find('.metadata').text()).toEqual('Created:02/03/2019 12:00 a.m.');
 });
 
 it('renders with editing ideas', () => {

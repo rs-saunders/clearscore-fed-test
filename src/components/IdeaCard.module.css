@@ -19,4 +19,22 @@
 
 .description {
   margin: 10px;
+  margin-bottom: 25px;
+}
+
+.metadata {
+  margin: 10px;
+  font-size: 0.70rem;
+}
+
+.metadata dt {
+  display: inline;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.metadata dd {
+  display: inline;
+  margin-left: 0;
+  margin-right: 0.5rem;
 }

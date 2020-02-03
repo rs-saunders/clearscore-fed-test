@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { subDays } from 'date-fns';
 import styles from './App.module.css';
 import ColumnLayout from './components/ColumnLayout';
 import IdeaList from './components/IdeaList';
@@ -15,18 +16,22 @@ const ideas = [
     ideaList: 'Good Ideas',
     editing: false,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+    createdAt: subDays(Date.now(), 5),
+    updatedAt: subDays(Date.now(), 2),
   },
   {
     title: 'Idea 2',
     ideaList: 'Good Ideas',
     editing: true,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+    createdAt: subDays(Date.now(), 2),
   },
   {
     title: 'Idea 3',
     ideaList: 'Bad Ideas',
     editing: false,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+    createdAt: subDays(Date.now(), 1),
   },
   {
     title: 'Idea 4',
