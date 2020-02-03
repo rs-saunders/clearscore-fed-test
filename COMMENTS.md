@@ -9,6 +9,7 @@
   * responsive design
 * I would normally add more tests but ran out of time.
 * If i were to continue this I would likely switch to using Redux to handle the state and actions because the top level App is getting crowded.
+* The state is coded in an immutable way with each action as a pure function
 
 ## TODO
 * Utilise the localStorage API to persist current state when the page is refreshed.
