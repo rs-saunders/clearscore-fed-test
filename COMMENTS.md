@@ -10,7 +10,6 @@
 * I would normally add more tests but ran out of time.
 
 ## TODO
-* highlight title input on new/edit
 * Sort ideas alphabetically / by created date
 * new secondary button style and/or icon for 'edit', 'delete', and 'add new idea' buttons
 * Utilise the localStorage API to persist current state when the page is refreshed.

@@ -4,6 +4,7 @@ import cx from 'classnames';
 import * as Yup from 'yup';
 import styles from './IdeaForm.module.css';
 import Button from './Button';
+import FocusedInput from './FocusedInput';
 
 const IdeaForm = ({
   id='',
@@ -44,6 +45,7 @@ const IdeaForm = ({
                 type="text"
                 name="title"
                 className={cx(styles.input, styles.title)}
+                component={FocusedInput}
                 placeholder="title"
               />
             </div>
