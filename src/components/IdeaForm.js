@@ -5,10 +5,18 @@ import * as Yup from 'yup';
 import styles from './IdeaForm.module.css';
 import Button from './Button';
 
-const IdeaForm = ({ id='', ideaList='', title = '', description = '', saveIdea = () => {}}) => (
+const IdeaForm = ({
+  id='',
+  ideaList='',
+  title = '',
+  description = '',
+  new: isNew = true,
+  editing: isEditing = false,
+  saveIdea = () => {},
+}) => (
   <div className={styles.container}>
     <Formik
-      initialValues={{id, title, description}}
+      initialValues={{title, description}}
       validationSchema={Yup.object({
         title: Yup.string()
           .max(15, 'Title must be 25 characters or less')
@@ -20,9 +28,10 @@ const IdeaForm = ({ id='', ideaList='', title = '', description = '', saveIdea =
         saveIdea({
           id,
           ideaList,
-          editing: false,
           title: values.title,
           description: values.description,
+          createdAt: isNew ? Date.now() : undefined,
+          updatedAt: isEditing ? Date.now() : undefined,
         });
       }}
     >

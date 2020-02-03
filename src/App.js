@@ -18,7 +18,6 @@ const App = () => {
       id: randomId(),
       title: 'Idea 1',
       ideaList: 'Good Ideas',
-      editing: false,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
       createdAt: subDays(Date.now(), 5),
       updatedAt: subDays(Date.now(), 2),
@@ -35,7 +34,6 @@ const App = () => {
       id: randomId(),
       title: 'Idea 3',
       ideaList: 'Bad Ideas',
-      editing: false,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
       createdAt: subDays(Date.now(), 1),
     },
@@ -45,6 +43,7 @@ const App = () => {
       ideaList: 'Other Ideas',
       editing: true,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+      createdAt: subDays(Date.now(), 1),
     },
   ]);
 
