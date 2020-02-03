@@ -10,8 +10,9 @@ const IdeaForm = ({
   ideaList='',
   title = '',
   description = '',
-  new: isNew = true,
+  new: isNew = false,
   editing: isEditing = false,
+  createdAt,
   saveIdea = () => {},
 }) => (
   <div className={styles.container}>
@@ -30,7 +31,7 @@ const IdeaForm = ({
           ideaList,
           title: values.title,
           description: values.description,
-          createdAt: isNew ? Date.now() : undefined,
+          createdAt: isNew ? Date.now() : createdAt,
           updatedAt: isEditing ? Date.now() : undefined,
         });
       }}

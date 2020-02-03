@@ -7,6 +7,7 @@
   * flexbox
   * css custom properties
   * responsive design
+* I would normally add more tests but ran out of time.
 
 ## TODO
 * highlight title input on new/edit
