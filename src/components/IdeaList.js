@@ -4,7 +4,13 @@ import IdeaCard from './IdeaCard';
 import IdeaForm from './IdeaForm';
 import Button from './Button';
 
-const IdeaList = ({title = '', ideas = [], addNewIdea = () => {}, saveIdea = () => {}}) => (
+const IdeaList = ({
+  title = '',
+  ideas = [],
+  addNewIdea = () => {},
+  saveIdea = () => {},
+  editIdea = () => {},
+}) => (
   <section className={styles.container}>
     <h2 className={styles.title}>{title}</h2>
     <ul className={styles.list}>
@@ -15,7 +21,7 @@ const IdeaList = ({title = '', ideas = [], addNewIdea = () => {}, saveIdea = () 
         >
           {idea.editing || idea.new
             ? <IdeaForm {...idea} saveIdea={saveIdea} />
-            : <IdeaCard {...idea} />
+            : <IdeaCard {...idea} editIdea={editIdea} />
           }
         </li>
       ))}

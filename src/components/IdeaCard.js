@@ -1,10 +1,30 @@
 import React from 'react';
 import { format } from 'date-fns';
 import styles from './IdeaCard.module.css';
+import Button from './Button';
 
-const IdeaCard = ({title, description, createdAt, updatedAt}) => (
+const IdeaCard = ({
+  id,
+  title,
+  description,
+  createdAt,
+  updatedAt,
+  editIdea = () => {}
+}) => (
   <div className={styles.container}>
-    <h3 className={styles.title}>{title}</h3>
+    <div className={styles.header}>
+      <div>
+        <h3 className={styles.title}>{title}</h3>
+      </div>
+      <div className={styles.lastCol}>
+        <Button
+          type="button"
+          onClick={() => editIdea(id)}
+        >
+          Edit
+        </Button>
+      </div>
+    </div>
     <hr />
     <p className={styles.description}>{description}</p>
     <dl className={styles.metadata}>
