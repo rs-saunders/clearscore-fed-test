@@ -84,6 +84,26 @@ const App = () => {
     ]);
   }
 
+  const sortIdeas = (ideaList, key) => {
+    const ideasForThisList = ideas.filter(idea => idea.ideaList === ideaList);
+    const ideasForOtherList = ideas.filter(idea => idea.ideaList !== ideaList);
+
+    const compareIdeas = (a, b) => {
+      if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+        return 0;
+      }
+
+      return (key === 'title')
+        ? a[key].localeCompare(b[key])
+        : a[key] - b[key];
+    };
+
+    setIdeas([
+      ...ideasForOtherList,
+      ...ideasForThisList.sort(compareIdeas),
+    ]);
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -99,6 +119,7 @@ const App = () => {
               saveIdea={saveIdea}
               editIdea={editIdea}
               deleteIdea={deleteIdea}
+              sortIdea={sortIdeas}
               ideas={ideas
                 .filter(idea => idea.ideaList === title)
               }
@@ -107,7 +128,7 @@ const App = () => {
         </ColumnLayout>
       </main>
       <footer className={styles.footer}>
-        ClearScore FED test - Richard Saunders (Feb 2020)
+        ClearScore FED test - <a href="https://github.com/rs-saunders/clearscore-fed-test">Github repository</a> - Richard Saunders (Feb 2020)
       </footer>
     </div>
   );

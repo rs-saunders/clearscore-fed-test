@@ -10,6 +10,7 @@ const IdeaList = ({
   addNewIdea = () => {},
   saveIdea = () => {},
   editIdea = () => {},
+  sortIdea = () => {},
   deleteIdea = () => {},
 }) => (
   <section className={styles.container}>
@@ -27,9 +28,21 @@ const IdeaList = ({
         </li>
       ))}
     </ul>
-    <Button type="button" primary onClick={() => addNewIdea(title)}>
-      Add new Idea
-    </Button>
+    <div className={styles.footer}>
+      <div>
+        <Button type="button" primary onClick={() => addNewIdea(title)}>
+          Add new Idea
+        </Button>
+      </div>
+      <div className={styles.lastCol}>
+        <Button type="button" secondary onClick={() => sortIdea(title, 'title')}>
+          Sort by Title
+        </Button>
+        <Button type="button" secondary onClick={() => sortIdea(title, 'createdAt')}>
+          Sort by Date
+        </Button>
+      </div>
+    </div>
   </section>
 );
 

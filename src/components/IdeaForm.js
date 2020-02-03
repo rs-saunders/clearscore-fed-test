@@ -46,7 +46,7 @@ const IdeaForm = ({
                 name="title"
                 className={cx(styles.input, styles.title)}
                 component={FocusedInput}
-                placeholder="title"
+                placeholder="Title"
               />
             </div>
             <div className={styles.lastCol}>
@@ -63,7 +63,7 @@ const IdeaForm = ({
           <Field
             name="description"
             component="textarea"
-            placeholder="description"
+            placeholder="Description"
             className={cx(styles.input, styles.description)}
           />
           <div className={styles.footer}>

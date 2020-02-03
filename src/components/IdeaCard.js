@@ -29,7 +29,7 @@ const IdeaCard = ({
           type="button"
           secondary
           onClick={() => {
-            if (window.confirm('Are you sure you want to delete this task?')) {
+            if (window.confirm('Are you sure you want to delete this idea?')) {
               deleteIdea(id)
             }
           }}
