@@ -24,7 +24,7 @@ const IdeaForm = ({
           .max(15, 'Title must be 25 characters or less')
           .required('A title is required'),
         description: Yup.string()
-          .max(150, 'Description must be 150 characters or less'),
+          .max(140, 'Description must be 140 characters or less'),
       })}
       onSubmit={(values) => {
         saveIdea({
