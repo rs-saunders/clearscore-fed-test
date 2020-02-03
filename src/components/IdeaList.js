@@ -27,7 +27,7 @@ const IdeaList = ({
         </li>
       ))}
     </ul>
-    <Button type="button" onClick={() => addNewIdea(title)}>
+    <Button type="button" primary onClick={() => addNewIdea(title)}>
       Add new Idea
     </Button>
   </section>

@@ -11,7 +11,6 @@
 
 ## TODO
 * Sort ideas alphabetically / by created date
-* new secondary button style and/or icon for 'edit', 'delete', and 'add new idea' buttons
 * Utilise the localStorage API to persist current state when the page is refreshed.
 * Add a character countdown as the user is approaching the limit of their description text.
 * Add an unobtrusive notification when an update is made to a tile.

@@ -52,6 +52,7 @@ const IdeaForm = ({
             <div className={styles.lastCol}>
               <Button
                 type="submit"
+                primary
                 disabled={isSubmitting}
               >
                 Save

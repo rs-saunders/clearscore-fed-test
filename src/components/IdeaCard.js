@@ -20,12 +20,14 @@ const IdeaCard = ({
       <div className={styles.lastCol}>
         <Button
           type="button"
+          secondary
           onClick={() => editIdea(id)}
         >
           Edit
         </Button>
         <Button
           type="button"
+          secondary
           onClick={() => {
             if (window.confirm('Are you sure you want to delete this task?')) {
               deleteIdea(id)
