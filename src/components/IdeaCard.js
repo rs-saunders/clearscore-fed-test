@@ -9,7 +9,8 @@ const IdeaCard = ({
   description,
   createdAt,
   updatedAt,
-  editIdea = () => {}
+  editIdea = () => {},
+  deleteIdea = () => {},
 }) => (
   <div className={styles.container}>
     <div className={styles.header}>
@@ -22,6 +23,16 @@ const IdeaCard = ({
           onClick={() => editIdea(id)}
         >
           Edit
+        </Button>
+        <Button
+          type="button"
+          onClick={() => {
+            if (window.confirm('Are you sure you want to delete this task?')) {
+              deleteIdea(id)
+            }
+          }}
+        >
+          Delete
         </Button>
       </div>
     </div>

@@ -10,6 +10,7 @@ const IdeaList = ({
   addNewIdea = () => {},
   saveIdea = () => {},
   editIdea = () => {},
+  deleteIdea = () => {},
 }) => (
   <section className={styles.container}>
     <h2 className={styles.title}>{title}</h2>
@@ -21,7 +22,7 @@ const IdeaList = ({
         >
           {idea.editing || idea.new
             ? <IdeaForm {...idea} saveIdea={saveIdea} />
-            : <IdeaCard {...idea} editIdea={editIdea} />
+            : <IdeaCard {...idea} editIdea={editIdea} deleteIdea={deleteIdea} />
           }
         </li>
       ))}

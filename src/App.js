@@ -67,6 +67,14 @@ const App = () => {
     ]);
   }
 
+  const deleteIdea = (id) => {
+    const index = ideas.findIndex(idea => idea.id === id);
+    setIdeas([
+      ...ideas.slice(0, index),
+      ...ideas.slice(index+1, ideas.length),
+    ]);
+  }
+
   const saveIdea = (ideaToSave) => {
     const index = ideas.findIndex(idea => idea.id === ideaToSave.id);
     setIdeas([
@@ -90,6 +98,7 @@ const App = () => {
               addNewIdea={addNewIdea}
               saveIdea={saveIdea}
               editIdea={editIdea}
+              deleteIdea={deleteIdea}
               ideas={ideas
                 .filter(idea => idea.ideaList === title)
               }
