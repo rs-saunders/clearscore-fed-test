@@ -13,7 +13,7 @@ const IdeaList = ({title = '', ideas = [], addNewIdea = () => {}, saveIdea = () 
           key={idea.id}
           className={styles.item}
         >
-          {idea.editing
+          {idea.editing || idea.new
             ? <IdeaForm {...idea} saveIdea={saveIdea} />
             : <IdeaCard {...idea} />
           }

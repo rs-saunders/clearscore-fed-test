@@ -54,7 +54,7 @@ const App = () => {
       {
         id: randomId(),
         ideaList,
-        editing: true,
+        new: true,
         title: '',
         description: '',
       }

@@ -46,7 +46,7 @@ it('renders with ideas', () => {
   expect(lastIdea.find('.metadata').text()).toEqual('Created:02/03/2019 12:00 a.m.');
 });
 
-it('renders with editing ideas', () => {
+it('renders with editing and new ideas', () => {
   const wrapper = mount(<IdeaList ideas={[
     {
       id: 1,
@@ -55,8 +55,8 @@ it('renders with editing ideas', () => {
     },
     {
       id: 2,
-      title: 'Idea 2',
       editing: true,
+      title: 'Idea 2',
       description: `some description 2`,
     },
     {
@@ -66,8 +66,8 @@ it('renders with editing ideas', () => {
     },
     {
       id: 4,
+      new: true,
       title: 'Idea 4',
-      editing: true,
       description: `some description 4`,
     },
   ]} />);
