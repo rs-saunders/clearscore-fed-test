@@ -13,21 +13,25 @@ const ideas = [
   {
     title: 'Idea 1',
     ideaList: 'Good Ideas',
+    editing: false,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 2',
     ideaList: 'Good Ideas',
+    editing: true,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 3',
     ideaList: 'Bad Ideas',
+    editing: false,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
   {
     title: 'Idea 4',
     ideaList: 'Other Ideas',
+    editing: true,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
   },
 ];

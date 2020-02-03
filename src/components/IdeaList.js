@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './IdeaList.module.css';
 import IdeaCard from './IdeaCard';
+import IdeaForm from './IdeaForm';
 
 const IdeaList = ({title = '', ideas = []}) => (
   <section className={styles.container}>
@@ -11,7 +12,10 @@ const IdeaList = ({title = '', ideas = []}) => (
           key={idea.title}
           className={styles.item}
         >
-          <IdeaCard {...idea} />
+          {idea.editing
+            ? <IdeaForm {...idea} />
+            : <IdeaCard {...idea} />
+          }
         </li>
       ))}
     </ul>
