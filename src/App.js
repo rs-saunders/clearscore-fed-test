@@ -1,70 +1,71 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { subDays } from 'date-fns';
 import styles from './App.module.css';
 import ColumnLayout from './components/ColumnLayout';
 import IdeaList from './components/IdeaList';
 
-const ideaLists = [
-  'Good Ideas',
-  'Bad Ideas',
-  'Other Ideas',
-];
+const App = () => {
 
-const ideas = [
-  {
-    title: 'Idea 1',
-    ideaList: 'Good Ideas',
-    editing: false,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
-    createdAt: subDays(Date.now(), 5),
-    updatedAt: subDays(Date.now(), 2),
-  },
-  {
-    title: 'Idea 2',
-    ideaList: 'Good Ideas',
-    editing: true,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
-    createdAt: subDays(Date.now(), 2),
-  },
-  {
-    title: 'Idea 3',
-    ideaList: 'Bad Ideas',
-    editing: false,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
-    createdAt: subDays(Date.now(), 1),
-  },
-  {
-    title: 'Idea 4',
-    ideaList: 'Other Ideas',
-    editing: true,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
-  },
-];
+  const [ ideaLists ] = useState([
+    'Good Ideas',
+    'Bad Ideas',
+    'Other Ideas',
+  ]);
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className={styles.container}>
-        <header className={styles.header}>
-          <h1>Idea Board</h1>
-        </header>
-        <main className={styles.main}>
-          <ColumnLayout>
-            {ideaLists.map(title => (
-              <IdeaList
-                key={title}
-                title={title}
-                ideas={ideas
-                  .filter(idea => idea.ideaList === title)
-                }
-              />
-            ))}
-          </ColumnLayout>
-        </main>
-        <footer className={styles.footer}>
-          ClearScore FED test - Richard Saunders (Feb 2020)
-        </footer>
-      </div>
-    );
-  }
-}
+  const [ ideas ] = useState([
+    {
+      title: 'Idea 1',
+      ideaList: 'Good Ideas',
+      editing: false,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+      createdAt: subDays(Date.now(), 5),
+      updatedAt: subDays(Date.now(), 2),
+    },
+    {
+      title: 'Idea 2',
+      ideaList: 'Good Ideas',
+      editing: true,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+      createdAt: subDays(Date.now(), 2),
+    },
+    {
+      title: 'Idea 3',
+      ideaList: 'Bad Ideas',
+      editing: false,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+      createdAt: subDays(Date.now(), 1),
+    },
+    {
+      title: 'Idea 4',
+      ideaList: 'Other Ideas',
+      editing: true,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in facilisis orci. Phasellus euismod, lorem eget rutrum aliquam, neque velit rhoncus',
+    },
+  ]);
+
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1>Idea Board</h1>
+      </header>
+      <main className={styles.main}>
+        <ColumnLayout>
+          {ideaLists.map(title => (
+            <IdeaList
+              key={title}
+              title={title}
+              ideas={ideas
+                .filter(idea => idea.ideaList === title)
+              }
+            />
+          ))}
+        </ColumnLayout>
+      </main>
+      <footer className={styles.footer}>
+        ClearScore FED test - Richard Saunders (Feb 2020)
+      </footer>
+    </div>
+  );
+};
+
+export default App;
